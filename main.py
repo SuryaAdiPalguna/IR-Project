@@ -85,32 +85,3 @@ if query:
       st.write("---")
   else:
     st.write("Tidak ada dokumen yang relevan ditemukan.")
-
-
-  # result = find_document(query_processing)
-  # result = scoring_document(query_processing, result, top_k=20)
-
-  # if len(result) > 0:
-  #   st.write("## Hasil Pencarian:")
-  #   for index, row in result.iterrows():
-  #     st.write(f'[{row['url'].split('://')[1].split('/')[0]}]({row['url']}) > {row['source']}')
-  #     st.write(f"#### [{row['title']}]({row['url']})")
-  #     st.write(f"{row['content'][:200]}...")
-  #     st.write(f"**Relevansi:** {row['cosine_score']:.4f}")
-  #     st.write("---")
-  # else:
-  #   correct_query = spelling_correction(query_processing)
-  #   result = find_document(correct_query)
-  #   result = scoring_document(correct_query, result, top_k=20)
-
-  #   if len(result) > 0:
-  #     st.write(f"Mungkin yang dimaksud: **{correct_query}**")
-  #     st.write("## Hasil Pencarian:")
-  #     for index, row in result.iterrows():
-  #       st.write(f'[{row['url'].split('://')[1].split('/')[0]}]({row['url']}) > {row['source']}')
-  #       st.write(f"#### [{row['title']}]({row['url']})")
-  #       st.write(f"{row['content'][:200]}...")
-  #       st.write(f"**Relevansi:** {row['cosine_score']:.4f}")
-  #       st.write("---")
-  #   else:
-  #     st.write("Tidak ada dokumen yang relevan ditemukan.")
