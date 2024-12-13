@@ -2,7 +2,7 @@ import pandas as pd
 import nltk
 import re
 from nltk.corpus import stopwords
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from mpstemmer import MPStemmer
 
 def cleaning_data(df: pd.DataFrame) -> pd.DataFrame:
   df = df.dropna()
@@ -33,6 +33,7 @@ def normalization(text: list) -> list:
   return text.split()
 
 def stemming(text: list) -> list:
-  factory = StemmerFactory()
-  stemmer = factory.create_stemmer()
-  return [stemmer.stem(word) for word in text]
+  # factory = StemmerFactory()
+  # stemmer = factory.create_stemmer()
+  stemmer = MPStemmer()
+  return [stemmer.stem_kalimat(word) for word in text]
