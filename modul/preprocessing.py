@@ -33,7 +33,5 @@ def normalization(text: list) -> list:
   return text.split()
 
 def stemming(text: list) -> list:
-  # factory = StemmerFactory()
-  # stemmer = factory.create_stemmer()
   stemmer = MPStemmer()
   return [stemmer.stem_kalimat(word) for word in text]
